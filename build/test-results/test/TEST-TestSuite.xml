@@ -1,44 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" tests="38" skipped="0" failures="0" errors="0" timestamp="2022-12-13T03:37:15" hostname="MacBook-Air-de-Javier.local" time="0.072">
+<testsuite name="TestSuite" tests="13" skipped="0" failures="0" errors="0" timestamp="2022-12-13T04:54:15" hostname="MacBook-Air-de-Javier.local" time="0.041">
   <properties/>
-  <testcase name="testGetHistoryWithdrawCLP()" classname="TestSuite" time="0.011"/>
-  <testcase name="testGetHistoryWithdrawUSD()" classname="TestSuite" time="0.001"/>
-  <testcase name="testDepositUSDMaxAmount()" classname="TestSuite" time="0.006"/>
-  <testcase name="testLogOutNotLoggedIn()" classname="TestSuite" time="0.001"/>
-  <testcase name="testNumberOfOperationsInSession()" classname="TestSuite" time="0.001"/>
-  <testcase name="testDepositCLPMinAmount()" classname="TestSuite" time="0.001"/>
-  <testcase name="testWithdrawCLPNoFunds()" classname="TestSuite" time="0.001"/>
-  <testcase name="testDepositCLPNegative()" classname="TestSuite" time="0.002"/>
-  <testcase name="testWithdrawCLPNegative()" classname="TestSuite" time="0.001"/>
-  <testcase name="testLogIn()" classname="TestSuite" time="0.001"/>
-  <testcase name="testGetHistoryDepositCLP()" classname="TestSuite" time="0.001"/>
-  <testcase name="testGetHistoryDepositUSD()" classname="TestSuite" time="0.0"/>
-  <testcase name="testDepositUSDMinAmount()" classname="TestSuite" time="0.001"/>
-  <testcase name="testLogInUserNotExists()" classname="TestSuite" time="0.001"/>
-  <testcase name="testGetHistoryNotLoggedIn()" classname="TestSuite" time="0.001"/>
-  <testcase name="testWithdrawCLPMaxAmount()" classname="TestSuite" time="0.001"/>
-  <testcase name="testGetHistoryEmpty()" classname="TestSuite" time="0.0"/>
-  <testcase name="testDepositUSDNegative()" classname="TestSuite" time="0.0"/>
-  <testcase name="testWithdrawUSDNegative()" classname="TestSuite" time="0.001"/>
-  <testcase name="testWithdrawCLPAllFunds()" classname="TestSuite" time="0.001"/>
-  <testcase name="testDepositCLP()" classname="TestSuite" time="0.002"/>
-  <testcase name="testDepositUSD()" classname="TestSuite" time="0.0"/>
-  <testcase name="testWithdrawUSDNoFunds()" classname="TestSuite" time="0.002"/>
-  <testcase name="testWithdrawUSDMaxAmount()" classname="TestSuite" time="0.002"/>
-  <testcase name="testWithdrawCLPMinAmount()" classname="TestSuite" time="0.001"/>
-  <testcase name="testWithdrawCLP()" classname="TestSuite" time="0.001"/>
-  <testcase name="testWithdrawUSD()" classname="TestSuite" time="0.001"/>
-  <testcase name="testWithdrawUSDAllFunds()" classname="TestSuite" time="0.0"/>
-  <testcase name="testGetHistoryMultipleOperations()" classname="TestSuite" time="0.002"/>
-  <testcase name="testWithdrawUSDMinAmount()" classname="TestSuite" time="0.0"/>
-  <testcase name="testNumberOfOperationsInSessionMax()" classname="TestSuite" time="0.0"/>
-  <testcase name="testDepositCLPNotLoggedIn()" classname="TestSuite" time="0.001"/>
-  <testcase name="testLogInAlreadyLoggedIn()" classname="TestSuite" time="0.0"/>
-  <testcase name="testDepositUSDNotLoggedIn()" classname="TestSuite" time="0.001"/>
-  <testcase name="testLogOut()" classname="TestSuite" time="0.0"/>
-  <testcase name="testLogInInvalidCredentials()" classname="TestSuite" time="0.0"/>
-  <testcase name="testWithdrawCLPNotLoggedIn()" classname="TestSuite" time="0.0"/>
-  <testcase name="testDepositCLPMaxAmount()" classname="TestSuite" time="0.0"/>
+  <testcase name="TestEditNonExistingBook()" classname="TestSuite" time="0.007"/>
+  <testcase name="testAddExistingBook()" classname="TestSuite" time="0.001"/>
+  <testcase name="testSearchExistingBookByAuthor()" classname="TestSuite" time="0.015"/>
+  <testcase name="testChageBookStatusToAvailable()" classname="TestSuite" time="0.001"/>
+  <testcase name="testSearchNonExistingBookByAuthor()" classname="TestSuite" time="0.0"/>
+  <testcase name="TestEditExistingBook()" classname="TestSuite" time="0.001"/>
+  <testcase name="testSearchNonExistingBookByISBN()" classname="TestSuite" time="0.001"/>
+  <testcase name="testSearchExistingBookByTitle()" classname="TestSuite" time="0.001"/>
+  <testcase name="testSearchExistingBookByISBN()" classname="TestSuite" time="0.002"/>
+  <testcase name="testChageBookStatusToUnavailable()" classname="TestSuite" time="0.005"/>
+  <testcase name="TestChangeUnexistingBookStatus()" classname="TestSuite" time="0.0"/>
+  <testcase name="testAddNotExistingBook()" classname="TestSuite" time="0.0"/>
+  <testcase name="testSearchNonExistingBookyTitle()" classname="TestSuite" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation

@@ -17,7 +17,7 @@ public class LibraryConsoleSystem {
     private String genero;
     private String ISBN;
     private String ubicacion;
-    private String estado;
+    private Boolean prestado;
     private String descripcion;
     private Boolean loop;
 
@@ -25,57 +25,125 @@ public class LibraryConsoleSystem {
         this.loop = true;
     }
 
-    private void addBook(String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ISBN, String ubicacion, String estado, String descripcion){
-        Book book = new Book(titulo, autor, fecha, paginas, editorial, genero, ISBN, ubicacion, estado, descripcion);
-        books.put(book.getISBN(), book);
+    public SystemError addBook(String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ISBN, String ubicacion, Boolean prestado, String descripcion){
+        Book book = new Book(titulo, autor, fecha, paginas, editorial, genero, ISBN, ubicacion, prestado, descripcion);
+        try {
+            if (books.containsKey(book.getISBN())) {
+                return SystemError.BOOK_ALREADY_EXISTS;
+            }
+            books.put(book.getISBN(), book);
+            return SystemError.SUCCESS;
+        } catch (Exception e) {
+            return SystemError.UNKNOWN;
+        }
     }
 
-    private void searchBookByTitle(String titulo){
+    public SystemError searchBookByTitle(String titulo){
+        var found = false;
         for (Book book : books.values()) {
             if (book.getTitulo().equals(titulo)) {
                 terminal.println(book.getTitulo());
+                found = true;
             }
+        }
+        if (found) {
+            return SystemError.SUCCESS;
+        } else {
+            return SystemError.BOOK_NOT_FOUND;
         }
     }
 
-    private void searchBookByAuthor(String autor){
+    public SystemError searchBookByAuthor(String autor){
+        var found = false;
         for (Book book : books.values()) {
             if (book.getAutor().equals(autor)) {
                 terminal.println(book.getTitulo());
+                found = true;
             }
+        }
+        if (found){
+            return SystemError.SUCCESS;
+        } else {
+            return SystemError.BOOK_NOT_FOUND;
         }
     }
 
-    private void searchBookByISBN(String ISBN){
+    public SystemError  searchBookByISBN(String ISBN){
+        var found = false;
         for (Book book : books.values()) {
             if (book.getISBN().equals(ISBN)) {
                 terminal.println(book.getTitulo());
+                found = true;
             }
+        }
+        if (found){
+            return SystemError.SUCCESS;
+        } else {
+            return SystemError.BOOK_NOT_FOUND;
         }
     }
 
-    private void editBook(String ISBN, String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ubicacion, String estado, String descripcion){
-        Book book = books.get(ISBN);
-        book.setTitulo(titulo);
-        book.setAutor(autor);
-        book.setFecha(fecha);
-        book.setPaginas(paginas);
-        book.setEditorial(editorial);
-        book.setGenero(genero);
-        book.setUbicacion(ubicacion);
-        book.setEstado(estado);
-        book.setDescripcion(descripcion);
+    public SystemError editBook(String ISBN, String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ubicacion, String descripcion){
+        try {
+            if (!books.containsKey(ISBN)) {
+                return SystemError.BOOK_NOT_FOUND;
+            }
+            Book book = books.get(ISBN);
+            book.setTitulo(titulo);
+            book.setAutor(autor);
+            book.setFecha(fecha);
+            book.setPaginas(paginas);
+            book.setEditorial(editorial);
+            book.setGenero(genero);
+            book.setUbicacion(ubicacion);
+            book.setDescripcion(descripcion);
+            return SystemError.SUCCESS;
+        } catch (Exception e) {
+            return SystemError.UNKNOWN;
+        }
     }
 
-    private void removeBook(String ISBN){
-        books.remove(ISBN);
+    public SystemError removeBook(String ISBN){
+        try {
+            if (!books.containsKey(ISBN)) {
+                return SystemError.BOOK_NOT_FOUND;
+            }
+            books.remove(ISBN);
+            return SystemError.SUCCESS;
+        } catch (Exception e) {
+            return SystemError.UNKNOWN;
+        }
     }
 
-    private void editBookState(String ISBN, String estado){
-        Book book = books.get(ISBN);
-        book.setEstado(estado);
+    public SystemError editBookState(String ISBN){
+        try {
+            if (!books.containsKey(ISBN)) {
+                return SystemError.BOOK_NOT_FOUND;
+            }
+            Book book = books.get(ISBN);
+            if (book.getPrestado()) {
+                book.setEstado(false);
+            } else {
+                book.setEstado(true);
+            }
+            return SystemError.SUCCESS;
+        } catch (Exception e) {
+            return SystemError.UNKNOWN;
+        }
     }
 
+    public void reloadDefaults(){
+        //reiniciar libros
+        books.clear();
+        //añadir libros por defecto (esto lo completo copilot, ni idea de si estos datos son correctos o no xd)
+        addBook("El principito", "Antoine de Saint-Exupéry", "1943", 96, "Seix Barral", "Infantil", "978-84-322-2719-3", "A1", false, "El principito es un cuento infantil escrito por Antoine de Saint-Exupéry y publicado en 1943. Es una de las obras más traducidas y vendidas de la literatura francesa. El libro es una fábula filosófica que trata sobre la amistad, la soledad, la pérdida, la sabiduría y la experiencia.");
+        addBook("El señor de los anillos", "J. R. R. Tolkien", "1954", 1216, "Minotauro", "Fantasía", "978-84-450-0001-5", "A2", false, "El Señor de los Anillos es una novela de fantasía épica escrita por el filólogo y académico británico J. R. R. Tolkien. Es la primera parte de una trilogía que también incluye las novelas El Hobbit y El Silmarillion. La trilogía narra la historia de la Tierra Media, un mundo ficticio creado por Tolkien, y se centra en la lucha del bien contra el mal, representada por la Guerra del Anillo, que se desarrolla en el curso de la historia.");
+        addBook("El alquimista", "Paulo Coelho", "1988", 197, "Debolsillo", "Novela", "978-84-204-2029-1", "A3", false, "El alquimista es una novela de aventuras y misterio escrita por el escritor brasileño Paulo Coelho. Fue publicada por primera vez en 1988. La novela cuenta la historia de un joven pastor andaluz que viaja a Egipto en busca de un tesoro escondido en las pirámides. Durante su viaje, el joven se encuentra con un alquimista que le enseña a seguir sus sueños y a convertirlos en realidad.");
+        addBook("El código Da Vinci", "Dan Brown", "2003", 736, "Debolsillo", "Novela", "978-84-204-2029-1", "A4", false, "El código Da Vinci es una novela de misterio y aventuras escrita por el autor estadounidense Dan Brown. Fue publicada en 2003 y se convirtió en un éxito de ventas internacional. La novela cuenta la historia de Robert Langdon, un profesor de simbología de la Universidad de Harvard, que se ve envuelto en una investigación sobre la misteriosa muerte de un sacerdote católico.");
+        addBook("El diario de Ana Frank", "Ana Frank", "1947", 288, "Seix Barral", "Biografía", "978-84-322-2719-3", "A5", false, "El diario de Ana Frank es un diario escrito por Ana Frank entre 1942 y 1944. Fue publicado por primera vez en 1947. El diario describe la vida de una familia judía holandesa que se escondió durante dos años en un anexo secreto de una casa en Amsterdam");
+        addBook("El perfume", "Patrick Süskind", "1985", 471, "Seix Barral", "Novela", "978-84-322-2719-3", "A6", false, "El perfume es una novela de Patrick Süskind publicada en 1985. La novela narra la historia de Jean-Baptiste Grenouille, un asesino en serie que mata a sus víctimas para robarles su olor. La novela se centra en la historia de Grenouille y en su búsqueda de la perfección olfativa.");
+        addBook("Farenheit 451", "Ray Bradbury", "1953", 256, "Seix Barral", "Ciencia ficción", "978-84-322-2719-3", "A7", false, "Fahrenheit 451 es una novela de ciencia ficción escrita por el autor estadounidense Ray Bradbury. Fue publicada en 1953. La novela se centra en Guy Montag, un bombero que trabaja en un futuro distópico en el que los libros están prohibidos y los bomberos tienen la tarea de quemarlos.");
+    }
 
 
     public void console(){
@@ -88,7 +156,7 @@ public class LibraryConsoleSystem {
         terminal.println("2. Buscar un libro");
         terminal.println("3. Editar un libro");
         terminal.println("4. Eliminar un libro");
-        terminal.println("5. Editar estado de un libro");
+        terminal.println("5. Editar prestado de un libro");
         terminal.println("6. Salir");
         int option = textIO.newIntInputReader().withMinVal(1).withMaxVal(6).read("Ingresa tu opcion: ");
         switch (option){
@@ -101,9 +169,9 @@ public class LibraryConsoleSystem {
                 genero = textIO.newStringInputReader().read("Ingrese genero: ");
                 ISBN = textIO.newStringInputReader().read("Ingrese ISBN: ");
                 ubicacion = textIO.newStringInputReader().read("Ingrese ubicacion: ");
-                estado = textIO.newStringInputReader().read("Ingrese estado: ");
+                prestado = false;
                 descripcion = textIO.newStringInputReader().read("Ingrese descripcion: ");
-                addBook(titulo, autor, fecha, paginas, editorial, genero, ISBN, ubicacion, estado, descripcion);
+                addBook(titulo, autor, fecha, paginas, editorial, genero, ISBN, ubicacion, prestado, descripcion);
                 break;
             case 2:
                 terminal.println("Desea buscar por: ");
@@ -135,9 +203,8 @@ public class LibraryConsoleSystem {
                 genero = textIO.newStringInputReader().read("Ingrese genero: ");
                 ISBN = textIO.newStringInputReader().read("Ingrese ISBN: ");
                 ubicacion = textIO.newStringInputReader().read("Ingrese ubicacion: ");
-                estado = textIO.newStringInputReader().read("Ingrese estado: ");
                 descripcion = textIO.newStringInputReader().read("Ingrese descripcion: ");
-                editBook(ISBN, titulo, autor, fecha, paginas, editorial, genero, ubicacion, estado, descripcion);
+                editBook(ISBN, titulo, autor, fecha, paginas, editorial, genero, ubicacion, descripcion);
                 break;
             case 4:
                 ISBN = textIO.newStringInputReader().read("Ingrese ISBN: ");
@@ -145,8 +212,7 @@ public class LibraryConsoleSystem {
                 break;
             case 5:
                 ISBN = textIO.newStringInputReader().read("Ingrese ISBN: ");
-                estado = textIO.newStringInputReader().read("Ingrese estado: ");
-                editBookState(ISBN, estado);
+                editBookState(ISBN);
                 break;
             case 6:
                 loop = false;

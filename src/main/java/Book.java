@@ -1,5 +1,5 @@
 public class Book {
-    public Book (String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ISBN, String ubicacion, String estado, String descripcion){
+    public Book (String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ISBN, String ubicacion, Boolean prestado, String descripcion){
         this.titulo = titulo;
         this.autor = autor;
         this.fecha = fecha;
@@ -8,7 +8,7 @@ public class Book {
         this.genero = genero;
         this.ISBN = ISBN;
         this.ubicacion = ubicacion;
-        this.estado = estado;
+        this.prestado = prestado;
         this.descripcion = descripcion;
     }
     private String titulo;
@@ -19,10 +19,10 @@ public class Book {
     private String genero;
     private String ISBN;
     private String ubicacion;
-    private String estado;
+    private Boolean prestado;
     private String descripcion;
 
-    public void put (String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ISBN, String ubicacion, String estado, String descripcion){
+    public void put (String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ISBN, String ubicacion, Boolean prestado, String descripcion){
         this.titulo = titulo;
         this.autor = autor;
         this.fecha = fecha;
@@ -31,7 +31,7 @@ public class Book {
         this.genero = genero;
         this.ISBN = ISBN;
         this.ubicacion = ubicacion;
-        this.estado = estado;
+        this.prestado = prestado;
         this.descripcion = descripcion;
     }
 
@@ -75,11 +75,16 @@ public class Book {
         this.ubicacion = ubicacion;
     }
 
-    public void setEstado(String estado){
-        this.estado = estado;
+    public void setEstado(Boolean prestado){
+        this.prestado = prestado;
     }
 
     public void setDescripcion(String descripcion){
         this.descripcion = descripcion;
     }
+
+    public Boolean getPrestado(){
+        return this.prestado;
+    }
+    
 }

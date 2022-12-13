@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">38</div>
+<div class="counter">13</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.046s</div>
+<div class="counter">0.034s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,193 +78,68 @@
 </tr>
 </thead>
 <tr>
-<td class="success">testDepositCLP()</td>
+<td class="success">TestChangeUnexistingBookStatus()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">TestEditExistingBook()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">TestEditNonExistingBook()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAddExistingBook()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAddNotExistingBook()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testChageBookStatusToAvailable()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testChageBookStatusToUnavailable()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSearchExistingBookByAuthor()</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSearchExistingBookByISBN()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testDepositCLPMaxAmount()</td>
+<td class="success">testSearchExistingBookByTitle()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSearchNonExistingBookByAuthor()</td>
 <td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testDepositCLPMinAmount()</td>
+<td class="success">testSearchNonExistingBookByISBN()</td>
 <td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testDepositCLPNegative()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testDepositCLPNotLoggedIn()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testDepositUSD()</td>
+<td class="success">testSearchNonExistingBookyTitle()</td>
 <td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testDepositUSDMaxAmount()</td>
-<td class="success">0.006s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testDepositUSDMinAmount()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testDepositUSDNegative()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testDepositUSDNotLoggedIn()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetHistoryDepositCLP()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetHistoryDepositUSD()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetHistoryEmpty()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetHistoryMultipleOperations()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetHistoryNotLoggedIn()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetHistoryWithdrawCLP()</td>
-<td class="success">0.011s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetHistoryWithdrawUSD()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testLogIn()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testLogInAlreadyLoggedIn()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testLogInInvalidCredentials()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testLogInUserNotExists()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testLogOut()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testLogOutNotLoggedIn()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNumberOfOperationsInSession()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNumberOfOperationsInSessionMax()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawCLP()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawCLPAllFunds()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawCLPMaxAmount()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawCLPMinAmount()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawCLPNegative()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawCLPNoFunds()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawCLPNotLoggedIn()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawUSD()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawUSDAllFunds()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawUSDMaxAmount()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawUSDMinAmount()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawUSDNegative()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testWithdrawUSDNoFunds()</td>
-<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -286,7 +161,7 @@ SLF4J: See http://www.slf4j.org/codes.html#noProviders for further details.
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at 13 dic 2022 00:37:16</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at 13 dic 2022 01:54:15</p>
 </div>
 </div>
 </body>

@@ -1,58 +1,23 @@
 ## Acerca de
-La tarea consiste en construir un aplicativo del "Blue Bank" que permita realizar 2 tipos de transacciones electrónicas:
-
-- Retirar dinero desde cuenta
-- Depositar dinero en cuenta
-
-Se debe tener en consideración que un usuario maneja dos tipos de cuentas (En 'CLP' y en 'USD').
+La tarea consiste en realizar un aplicativo de bibloteca que permita crear libros, agregarlos a una biblioteca y luego realizar préstamos de los mismos.
 
 ## Test a implementar
 
 |ítem	| Detalle| 
 |---- | ---- |
-|Test Inicialización|	|
-|Test de Sesión	||
-|Test Número de Operaciones por Sesión, en rango|	|
-|Test Número de Operaciones por Sesión, valor límite||	
-|Test Número de Sesiones, en rango	||
-|Test Número de Sesiones, valor límite	||
-|Test de Reinicio de Sesión	||
-|Test depósito||	
-|Test CantidadNoPermitida en CLP||	
-|Test CantidadNoPermitida en USD||	
-|Test CantidadNegativa en CLP	||
-|Test CantidadNegativa en USD	||
-|Test DespositoMontoCorrecto CLP||	
-|Test DepositoMontoCorrecto USD||	
-|Test DepositosIncrementos CLP|	Varias operaciones en test|
-|Test DepositoIncrements USD|	Varias operaciones en test|
-|Test DepositoMinimoPermitido CLP||	
-|Test DepositoMinimoPermitidoUSD||	
-|Test Retiro	||
-|Test CantidadNoPermitida en CLP||	
-|Test CantidadNoPermitida en USD	||
-|Test CantidadNegativa en CLP	||
-|Test CantidadNegativa en USD	||
-|Test RetiroMontoCorrecto CLP	||
-|Test RetiroMontoCorrecto USD	||
-|Test RetiroDremento en CLP|	Varias operaciones en test|
-|Test RetiroDremento USD|	Varias operaciones en test|
-|Test RetiroMinimoPermitido CLP|	|
-|Test RetiroMinimoPermitido USD	||
-|Test RetiroMáximoPermitido CLP	||
-|Test RetiroMáximoPermitido USD	||
-|Test RetiroVaciadoDeCuenta USD	||
-|Test RetiroVaciadoDeCuenta CLP	||
-|Test Historico de Transacciones	||
-|Test HistoricoTransaccionesInicio	||
-|Test HistoricoTransaccionesDeposito  CLP||	
-|Test HistoricoTransaccionesDeposito USD	||
-|Test HistoricoTransaccioneRetiro CLP	||
-|Test HistorioTransaccionesRetiro USD	||
-|TestAplicativo|	|
-|TestSet	|En caso de ser necesarios|
-|TestGetters|	En caso de ser necesarios||
-
+|TEST SearchExistingBookyTitle| Buscar un libro existente en la biblioteca|
+|TEST SearchNonExistingBookyTitle| Buscar un libro no existente en la biblioteca|
+|TEST SearchExistingBookyAuthor| Buscar un libro existente en la biblioteca por autor|
+|TEST SearchNonExistingBookyAuthor| Buscar un libro no existente en la biblioteca por autor|
+|TEST SearchExistingBookyISBN| Buscar un libro existente en la biblioteca por ISBN|
+|TEST SearchNonExistingBookyISBN| Buscar un libro no existente en la biblioteca por ISBN|
+|TEST testAddNotExistingBook| Agregar un libro a la biblioteca|
+|TEST testAddExistingBook| Agregar un libro existente a la biblioteca|
+|TEST testChageBookStatusToAvailable | Cambiar el estado de un libro a disponible|
+|TEST testChageBookStatusToNotAvailable | Cambiar el estado de un libro a no disponible|
+|TEST TestChangeUnexistingBookStatus | Cambiar el estado de un libro no existente|
+|Test TestEditExistingBook | Editar un libro existente|
+|Test TestEditNonExistingBook | Editar un libro no existente|
 
 ## Obtener las fuentes
 
