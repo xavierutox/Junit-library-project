@@ -57,13 +57,13 @@ public class TestSuite {
 
     @Test
     public void testAddExistingBook() {
-        this.result = this.system.addBook("El principito", "Antoine de Saint-Exupéry", "1943", 96, "Seix Barral", "Infantil", "978-84-322-2719-3", "A1", false, "El principito es un cuento infantil escrito por Antoine de Saint-Exupéry y publicado en 1943. Es una de las obras más traducidas y vendidas de la literatura francesa. El libro es una fábula filosófica que trata sobre la amistad, la soledad, la pérdida, la sabiduría y la experiencia.");
+        this.result = this.system.addBook("El principito", "Antoine de Saint-Exupéry", "1943", 96, "Seix Barral", "Infantil", "978-84-322-2719-3", "(1,2)", false, "El principito es un cuento infantil escrito por Antoine de Saint-Exupéry y publicado en 1943. Es una de las obras más traducidas y vendidas de la literatura francesa. El libro es una fábula filosófica que trata sobre la amistad, la soledad, la pérdida, la sabiduría y la experiencia.");
         assertEquals(SystemError.BOOK_ALREADY_EXISTS, this.result);
     }
 
     @Test
     public void testAddNotExistingBook() {
-        this.result = this.system.addBook("El principito 2", "Antoine de Saint-Exupéry", "1943", 96, "Seix Barral", "Infantil", "978-84-322-2719-4", "A1", false, "El principito es un cuento infantil escrito por Antoine de Saint-Exupéry y publicado en 1943. Es una de las obras más traducidas y vendidas de la literatura francesa. El libro es una fábula filosófica que trata sobre la amistad, la soledad, la pérdida, la sabiduría y la experiencia.");
+        this.result = this.system.addBook("El principito 2", "Antoine de Saint-Exupéry", "1943", 96, "Seix Barral", "Infantil", "978-84-322-2719-4", "(1,2)", false, "El principito es un cuento infantil escrito por Antoine de Saint-Exupéry y publicado en 1943. Es una de las obras más traducidas y vendidas de la literatura francesa. El libro es una fábula filosófica que trata sobre la amistad, la soledad, la pérdida, la sabiduría y la experiencia.");
         assertEquals(SystemError.SUCCESS, this.result);
     }
 
@@ -91,13 +91,13 @@ public class TestSuite {
 
     @Test
     public void TestEditExistingBook() {
-        this.result = this.system.editBook("978-84-322-2719-3", "El principito", "Antoine de Saint-Exupéry", "1943", 96, "Seix Barral", "Infantil", "A1", "El principito es un cuento infantil escrito por Antoine de Saint-Exupéry y publicado en 1943. Es una de las obras más traducidas y vendidas de la literatura francesa. El libro es una fábula filosófica que trata sobre la amistad, la soledad, la pérdida, la sabiduría y la experiencia.");
+        this.result = this.system.editBook("978-84-322-2719-3", "El principito", "Antoine de Saint-Exupéry", "1943", 96, "Seix Barral", "Infantil", "(1,2)", "El principito es un cuento infantil escrito por Antoine de Saint-Exupéry y publicado en 1943. Es una de las obras más traducidas y vendidas de la literatura francesa. El libro es una fábula filosófica que trata sobre la amistad, la soledad, la pérdida, la sabiduría y la experiencia.");
         assertEquals(SystemError.SUCCESS, this.result);
     }
 
     @Test
     public void TestEditNonExistingBook() {
-        this.result = this.system.editBook("978-84-322-2719-4", "El principito", "Antoine de Saint-Exupéry", "1943", 96, "Seix Barral", "Infantil", "A1", "El principito es un cuento infantil escrito por Antoine de Saint-Exupéry y publicado en 1943. Es una de las obras más traducidas y vendidas de la literatura francesa. El libro es una fábula filosófica que trata sobre la amistad, la soledad, la pérdida, la sabiduría y la experiencia.");
+        this.result = this.system.editBook("978-84-322-2719-4", "El principito", "Antoine de Saint-Exupéry", "1943", 96, "Seix Barral", "Infantil", "(1,2)", "El principito es un cuento infantil escrito por Antoine de Saint-Exupéry y publicado en 1943. Es una de las obras más traducidas y vendidas de la literatura francesa. El libro es una fábula filosófica que trata sobre la amistad, la soledad, la pérdida, la sabiduría y la experiencia.");
         assertEquals(SystemError.BOOK_NOT_FOUND, this.result);
     }
 }

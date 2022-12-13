@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" tests="13" skipped="0" failures="0" errors="0" timestamp="2022-12-13T04:54:15" hostname="MacBook-Air-de-Javier.local" time="0.041">
+<testsuite name="TestSuite" tests="13" skipped="0" failures="0" errors="0" timestamp="2022-12-13T15:35:45" hostname="MacBook-Air-de-Javier.local" time="0.049">
   <properties/>
-  <testcase name="TestEditNonExistingBook()" classname="TestSuite" time="0.007"/>
+  <testcase name="TestEditNonExistingBook()" classname="TestSuite" time="0.008"/>
   <testcase name="testAddExistingBook()" classname="TestSuite" time="0.001"/>
-  <testcase name="testSearchExistingBookByAuthor()" classname="TestSuite" time="0.015"/>
+  <testcase name="testSearchExistingBookByAuthor()" classname="TestSuite" time="0.023"/>
   <testcase name="testChageBookStatusToAvailable()" classname="TestSuite" time="0.001"/>
-  <testcase name="testSearchNonExistingBookByAuthor()" classname="TestSuite" time="0.0"/>
-  <testcase name="TestEditExistingBook()" classname="TestSuite" time="0.001"/>
+  <testcase name="testSearchNonExistingBookByAuthor()" classname="TestSuite" time="0.001"/>
+  <testcase name="TestEditExistingBook()" classname="TestSuite" time="0.0"/>
   <testcase name="testSearchNonExistingBookByISBN()" classname="TestSuite" time="0.001"/>
-  <testcase name="testSearchExistingBookByTitle()" classname="TestSuite" time="0.001"/>
+  <testcase name="testSearchExistingBookByTitle()" classname="TestSuite" time="0.002"/>
   <testcase name="testSearchExistingBookByISBN()" classname="TestSuite" time="0.002"/>
-  <testcase name="testChageBookStatusToUnavailable()" classname="TestSuite" time="0.005"/>
-  <testcase name="TestChangeUnexistingBookStatus()" classname="TestSuite" time="0.0"/>
-  <testcase name="testAddNotExistingBook()" classname="TestSuite" time="0.0"/>
+  <testcase name="testChageBookStatusToUnavailable()" classname="TestSuite" time="0.001"/>
+  <testcase name="TestChangeUnexistingBookStatus()" classname="TestSuite" time="0.001"/>
+  <testcase name="testAddNotExistingBook()" classname="TestSuite" time="0.001"/>
   <testcase name="testSearchNonExistingBookyTitle()" classname="TestSuite" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: No SLF4J providers were found.
