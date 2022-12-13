@@ -1,4 +1,14 @@
 public class Book {
+    private String titulo;
+    private String autor;
+    private String fecha;
+    private int paginas;
+    private String editorial;
+    private String genero;
+    private String ISBN;
+    private String ubicacion;
+    private Boolean prestado;
+    private String descripcion;
     public Book (String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ISBN, String ubicacion, Boolean prestado, String descripcion){
         this.titulo = titulo;
         this.autor = autor;
@@ -11,17 +21,8 @@ public class Book {
         this.prestado = prestado;
         this.descripcion = descripcion;
     }
-    private String titulo;
-    private String autor;
-    private String fecha;
-    private int paginas;
-    private String editorial;
-    private String genero;
-    private String ISBN;
-    private String ubicacion;
-    private Boolean prestado;
-    private String descripcion;
 
+    
     public void put (String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ISBN, String ubicacion, Boolean prestado, String descripcion){
         this.titulo = titulo;
         this.autor = autor;

@@ -1,9 +1,7 @@
 import org.beryx.textio.TextIO;
 import org.beryx.textio.TextIoFactory;
 import org.beryx.textio.TextTerminal;
-
 import java.util.HashMap;
-import java.util.List;
 
 public class LibraryConsoleSystem {
     private HashMap<String, Book> books = new HashMap<>();
