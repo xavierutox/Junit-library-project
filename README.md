@@ -32,24 +32,23 @@ Para obtener las fuentes y sus dependencias se deben realizar los siguientes pas
 
 `git clone https://github.com/xavierutox/Junit-library-project`
 
-- Obtener gradle y las dependencias
+- Ejecutar gradlew
 
-Ejecutar el binario `gradlew` o `gradlew.bat` según el sistema operativo utilizado.
-
-`./gradlew`
+ `./gradlew`
 
 ## Ejecutar las Pruebas
 
-Una vez obtenidas las dependencias podemos ejecutar `./gradlew test`
+Para ejecutar las pruebas en Junit5 se debe escribir:  `./gradlew test`
 
-Se generara un test de covertura en `build/customJacocoReportDir/test/html/index.html`
+Se generara un test de cobertura en `build/customJacocoReportDir/test/html/index.html`
 
 ## Compilar la aplicación
 
-Una vez realizadas las pruebas compilamos nuestro ejecutable: `./gradlew shadowJar`
+Se puede generar un ejecutable con: 
+ `./gradlew shadowJar`
 
 ## Ejecutar la aplicación
 
-El resultado de la compilación se puede ejecutar a través de: 
+El ejecutable se puede ejecutar con:
 
 `java -jar build/libs/Library-1.0-SNAPSHOT-all.jar`
