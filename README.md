@@ -1,6 +1,16 @@
 ## Acerca de
 Este proyecto es un fork del ejemplo https://github.com/Pruebas-de-Software/JUnit-Retiros-y-Depositos bajo la licencia GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007.
 Gran parte del readme es de su autoría al igual que la estructura base del proyecto.
+Se mantienen los créditos de los autores originales y se agradece su aporte.
+
+La licencia de este proyecto es GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007.
+
+Los cambios realizados son:
+
+- Se actualizó Junit a la versión 5.9.1, debido a que las versiones anteriores no funcionan con openJDK19
+- Se cambió el objetivo de la aplicación, se cambió de retiros y depositos a una biblioteca.
+
+En resumen:
 
 La tarea consiste en realizar un aplicativo de bibloteca que permita crear libros, agregarlos a una biblioteca y luego realizar préstamos de los mismos.
 
