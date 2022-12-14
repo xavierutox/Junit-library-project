@@ -24,15 +24,13 @@ La tarea consiste en realizar un aplicativo de bibloteca que permita crear libro
 |Test TestRemoveExistingBook | Eliminar un libro existente|
 |Test TestRemoveNonExistingBook | Eliminar un libro no existente|
 
-## Obtener las fuentes
-
-Para obtener las fuentes y sus dependencias se deben realizar los siguientes pasos:
+## Instalación
 
 - Clonar el repositorio
 
 `git clone https://github.com/xavierutox/Junit-library-project`
 
-- Ejecutar gradlew
+- Obtener las dependencias
 
  `./gradlew`
 
