@@ -1,3 +1,5 @@
+package bibloteca;
+
 public class Book {
     private String titulo;
     private String autor;
@@ -10,20 +12,6 @@ public class Book {
     private Boolean prestado;
     private String descripcion;
     public Book (String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ISBN, String ubicacion, Boolean prestado, String descripcion){
-        this.titulo = titulo;
-        this.autor = autor;
-        this.fecha = fecha;
-        this.paginas = paginas;
-        this.editorial = editorial;
-        this.genero = genero;
-        this.ISBN = ISBN;
-        this.ubicacion = ubicacion;
-        this.prestado = prestado;
-        this.descripcion = descripcion;
-    }
-
-    
-    public void put (String titulo, String autor, String fecha, int paginas, String editorial, String genero, String ISBN, String ubicacion, Boolean prestado, String descripcion){
         this.titulo = titulo;
         this.autor = autor;
         this.fecha = fecha;

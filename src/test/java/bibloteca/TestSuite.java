@@ -1,6 +1,9 @@
+package bibloteca;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 
 public class TestSuite {
     private final LibraryConsoleSystem system;
@@ -11,7 +14,7 @@ public class TestSuite {
     }
 
     @BeforeEach
-    private void reloadDefaults() {
+    public void reloadDefaults() {
         this.system.reloadDefaults();
     }
 
@@ -95,6 +98,18 @@ public class TestSuite {
     @Test
     public void TestEditNonExistingBook() {
         this.result = this.system.editBook("978-84-322-2719-4", "El principito", "Antoine de Saint-Exupéry", "1943", 96, "Seix Barral", "Infantil", "(1,2)", "El principito es un cuento infantil escrito por Antoine de Saint-Exupéry y publicado en 1943. Es una de las obras más traducidas y vendidas de la literatura francesa. El libro es una fábula filosófica que trata sobre la amistad, la soledad, la pérdida, la sabiduría y la experiencia.");
+        assertEquals(SystemError.BOOK_NOT_FOUND, this.result);
+    }
+
+    @Test
+    public void TestRemoveExistingBook() {
+        this.result = this.system.removeBook("978-84-322-2719-3");
+        assertEquals(SystemError.SUCCESS, this.result);
+    }
+
+    @Test
+    public void TestRemoveNonExistingBook() {
+        this.result = this.system.removeBook("978-84-322-2719-4");
         assertEquals(SystemError.BOOK_NOT_FOUND, this.result);
     }
 }

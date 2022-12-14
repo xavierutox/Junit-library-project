@@ -1,3 +1,4 @@
+package bibloteca;
 public enum SystemError {
     OK,
     UNKNOWN,

@@ -18,6 +18,8 @@ La tarea consiste en realizar un aplicativo de bibloteca que permita crear libro
 |TEST TestChangeUnexistingBookStatus | Cambiar el estado de un libro no existente|
 |Test TestEditExistingBook | Editar un libro existente|
 |Test TestEditNonExistingBook | Editar un libro no existente|
+|Test TestRemoveExistingBook | Eliminar un libro existente|
+|Test TestRemoveNonExistingBook | Eliminar un libro no existente|
 
 ## Obtener las fuentes
 
