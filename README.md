@@ -1,4 +1,7 @@
 ## Acerca de
+Este proyecto es un fork del ejemplo https://github.com/Pruebas-de-Software/JUnit-Retiros-y-Depositos bajo la licencia GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007.
+Gran parte del readme es de su autoría al igual que la estructura base del proyecto.
+
 La tarea consiste en realizar un aplicativo de bibloteca que permita crear libros, agregarlos a una biblioteca y luego realizar préstamos de los mismos.
 
 ## Test a implementar
@@ -38,6 +41,8 @@ Ejecutar el binario `gradlew` o `gradlew.bat` según el sistema operativo utiliz
 ## Ejecutar las Pruebas
 
 Una vez obtenidas las dependencias podemos ejecutar `./gradlew test`
+
+Se generara un test de covertura en `build/customJacocoReportDir/test/html/index.html`
 
 ## Compilar la aplicación
 
